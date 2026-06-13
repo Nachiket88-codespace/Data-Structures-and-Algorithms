@@ -1,18 +1,21 @@
 public class Smallest_in_arrays {
 
-    public static int smallest_num(int numberss[]){
+    public static int Smallest(int num[]){
         int smallest = Integer.MAX_VALUE ; 
-        for(int i=0 ; i < numberss.length ; i++){
-            if(numberss[i] < smallest){
-                smallest = numberss[i] ; 
+        for(int i=0 ; i<num.length ; i++){
+            if(num[i] < smallest){
+                smallest = num[i] ; 
             }
         }
-        return smallest ; 
-    }
-    public static void main(String[] args) {
-        int numberss[] = {2,4,6,8,10,12,14,16,-8} ; 
 
-        int smallestnum = smallest_num(numberss) ; 
-        System.out.println(smallestnum);
+        // System.out.print(smallest);
+        return smallest ;
+    }
+
+    public static void main(String[] args) {
+        int num[] = {2,5,6,8,9,1,7,4,3} ; 
+
+        System.out.println(Smallest(num));
+        
     }
 }

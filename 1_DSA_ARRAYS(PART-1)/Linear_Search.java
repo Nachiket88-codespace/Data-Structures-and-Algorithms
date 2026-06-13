@@ -1,24 +1,24 @@
 import java.util.*;
 public class Linear_Search {
 
-    public static int Linear_Search_num(int number[] , int key ){
-        for(int i=0 ; i < number.length ; i++){
-            if(number[i] == key){
+    public static int search(int num[] , int key){
+        for(int i=0 ; i<num.length ; i++){
+            if(num[i] == key){
+                System.out.print("key found at index "+ i);
                 return i ;
-            }
+           }
         }
-        return -1 ;
+        System.out.print("no key found");
+        return -1 ; 
     }
+
     public static void main(String[] args) {
-        int number[] = {2,4,6,8,10,12,14,16,18} ; 
         Scanner sc = new Scanner(System.in) ; 
-        System.out.print("enter any key from an array = ");
+        System.out.print("enter search key : ");
         int key = sc.nextInt() ; 
-
-        int index = Linear_Search_num(number, key) ; 
-        System.out.println(index);
-
+        int num[] = {2,4,6,8,10,12} ; 
+        
+        search(num, key) ; 
         sc.close();
-
     }
 }

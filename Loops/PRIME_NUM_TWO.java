@@ -1,25 +1,31 @@
-import java.util.* ;
+import java.util.*;
 public class PRIME_NUM_TWO {
+
     public static void main(String[] args) {
-        Scanner sc = new Scanner(System.in) ; 
+         Scanner sc = new Scanner(System.in) ;
+         System.out.print("enter a number greater >= 2 : ");
+         int num = sc.nextInt() ; 
 
-        System.out.print("enter any number : ");
-        int number = sc.nextInt() ; 
-        boolean is_prime_status = true ;
-
-        for ( int i=2 ; i <= Math.sqrt(number) ; i ++ ){
-            if (number % i == 0) {
-                is_prime_status = false ; 
+         boolean is_prime = true ; 
+         if(num == 2){
+            System.out.println("2 is a prime number ");
+         }
+         else if(num != 2){
+            for(int i=2 ; i<=Math.sqrt(num) ; i++){
+                if(num % i == 0){
+                    is_prime  =false ; 
+                }
             }
-        }
-        if (is_prime_status == true ) {
-            System.out.println(number + " is a prime number ");
-        }
-        else{
-            System.out.println(number + " is not a prime number ");
-        }
+         }
 
-        sc.close();
+         if(is_prime == true){
+            System.out.print(num + " is a prime number");
+         }
+         else{
+            System.out.print(num + " is not a prime number");
+         }
 
+         sc.close();
     }
 }
+

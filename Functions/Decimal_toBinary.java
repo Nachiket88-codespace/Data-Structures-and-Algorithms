@@ -1,25 +1,22 @@
-import java.util.* ; 
+import java.util.*;
 public class Decimal_toBinary {
-    public static int dec_to_bin(int decimal_number){
-        int binary_answer = 0 ;
-        int power = 0 ;
-        while (decimal_number > 0){
-            int remainder = decimal_number % 2 ;
-            binary_answer = binary_answer + (int)(remainder * Math.pow(10, power)) ;
-            power++ ;
-            decimal_number = decimal_number / 2 ;
-        } 
-        return binary_answer;
-    }
 
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in) ;
-        System.out.print("enter your binary number = ");
-        int decimal_num = sc.nextInt() ;
+        System.out.print("enter dec_num = ");
+        int dec_num = sc.nextInt() ; 
+        int power = 0 ;
+        int bin_num = 0 ;
+        int temp = dec_num ; 
 
-        int answer = dec_to_bin(decimal_num ) ;
-        System.out.println("binary conversion of "+ decimal_num + " is :" + answer );
+        while(temp > 0){
+            int remainder = temp % 2 ;
+            temp = temp / 2 ; 
+            bin_num = bin_num + ((remainder)*(int)Math.pow(10, power)) ; 
+            power++ ; 
+        }
 
+        System.out.println(bin_num);
         sc.close();
     }
 }

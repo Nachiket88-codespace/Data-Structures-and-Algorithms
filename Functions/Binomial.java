@@ -1,37 +1,32 @@
-import java.util.* ; 
+import java.util.*;
 public class Binomial {
-    public static int Fcatorial_fun(int number){
-        int factorial = 1 ; 
 
-        for(int i = 1 ; i <= number ; i++){
-            factorial = factorial * i ; 
+    public static int factorial(int num){
+        int fact = 1 ;
+        for(int i=1 ; i<=num ; i++){
+            fact = fact * i ; 
         }
-        // System.out.println(factorial);
-        return factorial ; 
+
+        return fact ; 
     }
 
-    public static int Binomial_calc(int n , int r ){
-        int n_value = Fcatorial_fun(n) ; 
-        int r_value = Fcatorial_fun(r) ; 
-        int n_r_value = Fcatorial_fun((n-r)) ; 
+    public static int binomial_ans(int n , int r){
+        int n_val = factorial(n) ; 
+        int r_val = factorial(r) ; 
+        int n_r_val = factorial((n-r)) ; 
 
-        int Binomial_ans = (n_value)/((r_value) * (n_r_value)) ; 
-        // System.out.println("binomial of : " + n + " , " + r + " is : " + Binomial_ans);
-
-        return Binomial_ans ; 
+        int Ans = ((n_val)/((r_val)*(n_r_val))) ;
+        return Ans ; 
     }
 
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in) ; 
-        System.out.print("enter value of n : ");
-        int a_num = sc.nextInt() ; 
-        System.out.print("enter value of r : ");
-        int b_num = sc.nextInt() ;
-        
-        int answer = Binomial_calc(a_num, b_num) ; 
-        System.out.println(answer);
+        System.out.print("enter value of n = ");
+        int n = sc.nextInt() ; 
+        System.out.print("enter value of r = ");
+        int r = sc.nextInt() ; 
 
+        System.out.println(binomial_ans(n, r));
         sc.close();
-
     }
 }

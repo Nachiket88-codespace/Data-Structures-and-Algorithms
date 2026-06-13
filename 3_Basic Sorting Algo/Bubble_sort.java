@@ -7,7 +7,7 @@ public class Bubble_sort {
                 if(num_array[j] > num_array[j+1]){
                     int temp = num_array[j+1] ; 
                     num_array[j+1] = num_array[j] ; 
-                    num_array[j] = temp ; 
+                    num_array[j] = temp ;
                 }
             }
         }

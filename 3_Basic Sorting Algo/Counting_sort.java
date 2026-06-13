@@ -1,4 +1,4 @@
-import java.util.*;
+// import java.util.*;
 public class Counting_sort {
 
     public static void sort_counting(int array_lists[]){

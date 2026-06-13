@@ -1,4 +1,4 @@
-import java.util.*;
+// import java.util.*;
 public class Trapping_rain_water {
 
     public static int water_trap(int height[]){
@@ -33,7 +33,7 @@ public class Trapping_rain_water {
         int answer = water_trap(height) ; 
         System.out.println(answer);   
 
-        Scanner sc = new Scanner(System.in) ; 
+        
         
 
     }

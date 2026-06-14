@@ -1,4 +1,4 @@
-import java.util.*;
+// import java.util.*;
 public class Trapping_rain_water {
 
     public static void trap_water_level(int bar_level[]){

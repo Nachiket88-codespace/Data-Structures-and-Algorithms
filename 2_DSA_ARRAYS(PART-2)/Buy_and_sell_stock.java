@@ -1,25 +1,25 @@
 // import java.util.*;
 public class Buy_and_sell_stock {
-    
-    public static int Stock_track(int prices[]){
-        int buyprice = Integer.MAX_VALUE ; 
-        int max_profit = 0 ;
 
-        for(int i=0 ; i < prices.length ; i++){
-            if(buyprice < prices[i]){
-                int profit = prices[i] - buyprice ; 
-                max_profit = Math.max(max_profit , profit) ; 
+    public static void max_profit_ans(int price[]){
+        int profit = 0 ; 
+        int max_profit = Integer.MIN_VALUE ; 
+
+        int buy_price = price[0] ; 
+        for(int i=1 ; i<price.length ; i++){
+            if(buy_price > price[i]){
+                buy_price = price[i]  ;
             }
             else{
-                buyprice = prices[i] ; 
+                profit = price[i] - buy_price ; 
+                max_profit = Math.max(max_profit, profit) ;
             }
         }
-        return max_profit ; 
+        System.out.println(max_profit);
     }
     public static void main(String[] args) {
-        int prices[] = {7,1,5,3,6,4} ; 
+        int price[] = {7,1,5,3,6,4} ; 
 
-        int global_profit = Stock_track(prices) ; 
-        System.out.println(global_profit);
+        max_profit_ans(price);
     }
 }

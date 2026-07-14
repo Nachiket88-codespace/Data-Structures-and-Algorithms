@@ -9,14 +9,14 @@ public class hollow_rhombus {
         System.out.print("enter num of columns = ");
         int total_columns = sc.nextInt() ; 
 
-        for(int i=1 ; i<=total_rows ; i++){
+        for(int k=1 ; k<=total_rows ; k++){
             // spaces:
-            for(int j=1 ; j<=(total_rows-i+1) ; j++){
+            for(int j=1 ; j<=(total_rows-k+1) ; j++){
                 System.out.print(" "+" ");
             }
             // stars:
             for(int j=1 ; j<=total_columns ; j++){
-                if(i==1 || i==total_rows || j==1 || j==total_columns){
+                if(k==1 || k==total_rows || j==1 || j==total_columns){
                     System.out.print("*"+" ");
                 }
                 else{

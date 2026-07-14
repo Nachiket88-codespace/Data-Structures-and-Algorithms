@@ -8,8 +8,8 @@ public class floyds_triangle {
         int total_rows = sc.nextInt() ; 
         int num = 1 ;
 
-        for(int i=1 ; i<=total_rows ; i++){
-            for(int j=1 ; j<=i ; j++){
+        for(int k=1 ; k<=total_rows ; k++){
+            for(int j=1 ; j<=k ; j++){
                 System.out.print(num+" ");
                 num++;
             }

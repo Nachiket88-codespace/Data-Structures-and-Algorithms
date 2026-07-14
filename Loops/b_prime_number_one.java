@@ -8,8 +8,8 @@ public class b_prime_number_one {
       int num = sc.nextInt() ; 
 
       boolean is_prime = true ; 
-      for(int i=2 ; i<=(num-1) ; i++){
-         if(num % i == 0){
+      for(int k=2 ; k<=(num-1) ; k++){
+         if(num % k == 0){
             is_prime = false ; 
          }
       }

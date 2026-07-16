@@ -3,22 +3,22 @@ import java.util.Scanner;
 public class b_prime_number_one {
 
    public static void main(String[] args) {
-      Scanner sc = new Scanner(System.in) ; 
+      Scanner sc = new Scanner(System.in) ;
       System.out.print("enter any number = ");
-      int num = sc.nextInt() ; 
+      int num = sc.nextInt() ;
 
-      boolean is_prime = true ; 
-      for(int k=2 ; k<=(num-1) ; k++){
-         if(num % k == 0){
-            is_prime = false ; 
+      boolean is_prime = true ;
+      for(int i=2 ; i<=(num-1) ; i++){
+         if(num % i == 0){
+            is_prime = false ;
          }
       }
 
       if(is_prime == true){
-         System.out.println(num+" is prime ");
+         System.out.print(num + " is a prime number");
       }
       else{
-         System.out.println(num+" is not prime ");
+         System.out.print(num + " is not a prime number");
       }
 
       sc.close();

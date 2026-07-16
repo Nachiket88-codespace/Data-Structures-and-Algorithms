@@ -1,25 +1,25 @@
-import java.util.Scanner;
-
+import java.util.*;
 public class a_pallindrome_number {
 
     public static void main(String[] args) {
-        Scanner sc = new Scanner(System.in) ; 
-        System.out.println("enter number your choice = ");
-        int num = sc.nextInt() ; 
-        int rev_num = 0 ; 
-        int temp = num ;
+        Scanner sc = new Scanner(System.in) ;
 
-        while(temp>0){
-            int remainder = temp % 10 ;
-            rev_num = rev_num*10 + remainder ; 
-            temp = temp / 10 ;
+        System.out.print("enter any number = ");
+        int num = sc.nextInt() ;
+        int temp_num = num ;
+        int rev_num = 0 ;
+
+        while(temp_num > 0){
+            int remainder = temp_num % 10 ;
+            temp_num = temp_num / 10 ;
+            rev_num  = (rev_num * 10) + remainder ;
         }
 
-        if(num == rev_num){
-            System.out.println("it is a pallindrome");
+        if(rev_num == num){
+            System.out.print(num + " is a pallindrome number");
         }
         else{
-            System.out.println("it is not a pallindrome");
+            System.out.print(num + " is not a pallindrome number");
         }
 
         sc.close();

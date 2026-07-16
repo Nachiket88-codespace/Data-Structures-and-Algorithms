@@ -1,28 +1,29 @@
-import java.util.Scanner;
-
+import java.util.*; 
 public class SUM_OF_EVEN_ODD {
+
     public static void main(String[] args) {
-         Scanner sc = new Scanner(System.in);
-         System.out.print("enter how many numbers to be read = ");
-         int count = sc.nextInt() ; 
-         int even_sum = 0 ;
-         int odd_sum = 0 ;
+        Scanner sc = new Scanner(System.in) ; 
 
-         for(int i=1 ; i<=count ; i++){
-            System.out.print("enter new number = ");
-            int new_num = sc.nextInt() ; 
+        System.out.print("enter how many numbers to be read = ");
+        int count = sc.nextInt() ; 
+        int even_sum = 0 ;
+        int odd_sum = 0 ;
 
-            if(new_num % 2 ==0){
-                even_sum = even_sum + new_num ; 
+        for(int i=1 ; i<=count ; i++){
+            System.out.print("enter another number = ");
+            int num = sc.nextInt() ;
+            
+            if(num % 2 == 0){
+                even_sum = even_sum + num ;
             }
             else{
-                odd_sum = odd_sum + new_num ; 
+                odd_sum = odd_sum + num ;
             }
-         }
+        }
 
-         System.out.println("even sum is = "+even_sum);
-         System.out.println("odd sum is = "+odd_sum);
+        System.out.println("sum of even numbers is = "+ even_sum);
+        System.out.print("sum of odd numbers is = "+ odd_sum);
 
-         sc.close();
+        sc.close();
     }
 }

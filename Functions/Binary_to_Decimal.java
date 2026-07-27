@@ -1,23 +1,29 @@
-import java.util.*;
+import java.util.* ;
 public class Binary_to_Decimal {
 
-    public static void main(String[] args) {
-        Scanner sc = new Scanner(System.in) ; 
-        System.out.print("enter binary num = ");
-        int bin_num = sc.nextInt() ; 
-
-        int power = 0 ; 
+    public static int Decimal_convert(int number){
         int dec_num = 0 ;
-        int temp = bin_num ; 
+        int temp_num = number ;
+        int power = 0 ;
 
-        while (temp > 0){
-            int last_digit = temp % 10 ;
-            temp = temp / 10 ;
-            dec_num = dec_num + (last_digit * (int)Math.pow(2, power)) ; 
-            power++ ; 
+        while(temp_num > 0){
+            int remainder = temp_num % 10 ;
+            temp_num = temp_num / 10 ;
+            dec_num = dec_num + (remainder*(int)Math.pow(2, power)) ;
+            power++ ;
         }
 
-        System.out.println("decimal num is = " + dec_num);
+        return dec_num ;
+    }
+
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in) ;
+        System.out.print("enter your binary number : ");
+        int bin_num = sc.nextInt() ; 
+
+        int dec_ans = Decimal_convert(bin_num) ;
+        System.out.println(dec_ans);
+
         sc.close();
     }
 }

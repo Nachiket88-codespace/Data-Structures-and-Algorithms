@@ -1,35 +1,32 @@
-import java.util.* ;
+import java.util.* ; 
 public class Binomial {
 
     public static int factorial(int num){
-        int fact= 1 ;
+        int fact = 1 ; 
         for(int i=1 ; i<=num ; i++){
-            fact = fact*i ;
+            fact = fact*i ; 
         }
-        
-        return fact ;
+        return fact ; 
     }
 
-    public static int Binomial_coeff(int n , int r){
-        int fact_n = factorial(n) ;
-        int fact_r = factorial(r) ;
-        int fact_n_r = factorial((n-r)) ;
+    public static int Binomials(int n , int r){
+        int n_fact = factorial(n) ; 
+        int r_fact = factorial(r) ; 
+        int n_r_fact = factorial(n-r) ; 
 
-        int bino_ans = ((fact_n) / ((fact_r)*(fact_n_r)));
+        int bino = (n_fact)/((r_fact)*(n_r_fact)) ; 
 
-        return bino_ans ;
+        return bino ; 
     }
-
     public static void main(String[] args) {
-        Scanner sc = new Scanner(System.in) ;
-        System.out.print("enter n value = ");
-        int num_n = sc.nextInt() ; 
-        System.out.print("enter r value = ");
-        int num_r = sc.nextInt() ; 
-
-        int ans = Binomial_coeff(num_n, num_r) ; 
-
-        System.out.print("binomial ans is = " + ans);
+        Scanner sc = new Scanner(System.in) ; 
+        System.out.print("enter value of n : ");
+        int n_val = sc.nextInt() ; 
+        System.out.print("enter value of r : ");
+        int r_val = sc.nextInt() ;
+        
+        int ans = Binomials(n_val, r_val) ; 
+        System.out.println(ans);
 
         sc.close();
     }

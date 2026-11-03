@@ -1,59 +1,34 @@
-import java.util.* ; 
-public class Prime_number_one {
+import java.util.*;
+public  class Prime_number_one {
 
-    public static boolean check_prime_status( int num ){
-        boolean prime_status = true ; 
-        if(num <= 1 ){
-            prime_status = false ;
-        }
-        else if(num == 2){
-            prime_status = true ; 
-        }
-        else if(num > 2 ){
-            for(int j=2 ; j <= Math.sqrt(num) ; j++){
-                if(num % j == 0){
-                    prime_status = false ; 
-                }
-            }
-        }
-        return prime_status ; 
-    }
-    //===============================================================================
-    
-    public static boolean IS_Prime(int number){
-        boolean is_prime_num = true ; 
+    public static void check_prime(int number){
+        boolean is_prime = true ; 
         if(number <= 1){
-            is_prime_num = false ; 
+            System.out.print("number is not prime ");
         }
-        else if(number == 2 ){
-            is_prime_num = true ; 
+        else if(number == 2){
+            System.out.print("number 2 is prime");
         }
         else if(number > 2){
-        for(int i=2 ; i <= (number-1) ; i++){
-            if(number % i == 0 ){
-                is_prime_num =false ; 
-                break ; 
+            for(int i=2 ; i<=(number-1) ; i++){
+                if(number%i == 0){
+                    is_prime = false ; 
+                }
             }
+            if(is_prime == true){
+            System.out.println(number + " is prime num ");
+        }
+        else{
+            System.out.print(number + " is not prime");
+        }
         }
     }
-        return is_prime_num ;
-    }
-     //===============================================================================
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in) ; 
-        System.out.print("enter any number : ");
-        int num = sc.nextInt() ; 
+        System.out.println("enter any number : ");
+        int nums = sc.nextInt() ; 
 
-        boolean status = IS_Prime(num) ; 
-        System.out.println(status);
-
-        System.out.println("---------------------------------------------------------");
-
-        System.out.print("enter your selected number : ");
-        int numb_s = sc.nextInt() ; 
-
-        boolean check_status = check_prime_status(numb_s) ; 
-        System.out.println(check_status);
+        check_prime(nums);
 
         sc.close();
     }

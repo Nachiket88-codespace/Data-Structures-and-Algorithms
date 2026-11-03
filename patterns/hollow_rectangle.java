@@ -1,17 +1,17 @@
-import java.util.Scanner;
-
+import java.util.*;
 public class hollow_rectangle {
 
     public static void main(String[] args) {
+        
         Scanner sc = new Scanner(System.in) ; 
-        System.out.print("enter num, of rows = ");
-        int total_rows = sc.nextInt() ;
-        System.out.print("enter num of columns = ");
-        int total_columns = sc.nextInt() ;
-
-        for(int i=1 ; i<=total_rows ; i++){
-            for(int j=1 ; j<=total_columns ; j++){
-                if(i==1 || i==total_rows  || j==1 || j==total_columns){
+        System.out.println("enter num of rows : ");
+        int rows  = sc.nextInt() ;
+        System.out.println("enter num of columns : ");
+        int column = sc.nextInt() ; 
+        
+        for(int i=1 ; i<=rows ; i++){
+            for(int j=1 ; j<=column ; j++){
+                if(i==1 || i==rows || j==1 || j==column){
                     System.out.print("*"+" ");
                 }
                 else{

@@ -1,27 +1,28 @@
 import java.util.*;
-public class a_pallindrome_number {
+public  class a_pallindrome_number {
 
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in) ;
 
-        System.out.print("enter any number = ");
-        int num = sc.nextInt() ;
-        int temp_num = num ;
-        int rev_num = 0 ;
+        System.out.print("enter any number : ");
+        int number = sc.nextInt() ; 
+        int rev_number = 0 ; 
+        int temp = number ; 
 
-        while(temp_num > 0){
-            int remainder = temp_num % 10 ;
-            temp_num = temp_num / 10 ;
-            rev_num  = (rev_num * 10) + remainder ;
+        while (temp>0) {
+            int remainder = temp%10 ; 
+            rev_number = rev_number*10 + remainder ; 
+            temp = temp/10 ; 
         }
 
-        if(rev_num == num){
-            System.out.print(num + " is a pallindrome number");
+        System.out.println("reversed number is = " + rev_number);
+        if(number == rev_number){
+            System.out.println("entered number is a pallindrome number");
         }
         else{
-            System.out.print(num + " is not a pallindrome number");
+            System.out.println("entered number is not pallindrome");
         }
 
-        sc.close();
+        sc.close() ; 
     }
 }

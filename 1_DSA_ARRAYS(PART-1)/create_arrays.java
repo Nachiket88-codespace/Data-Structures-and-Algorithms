@@ -10,6 +10,10 @@ public class create_arrays {
         System.out.println(marks);
         System.out.println(numbers);
         System.out.println(fruits);
+
+        for(int i=0 ; i<=fruits.length ; i++){
+            System.out.println(fruits[i]);
+        }
         
     }
 

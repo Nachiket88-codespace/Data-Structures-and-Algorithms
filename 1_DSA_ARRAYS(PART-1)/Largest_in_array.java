@@ -1,21 +1,22 @@
-// import java.util.* ; 
+import java.util.*;
 public class Largest_in_array {
 
-    public static int largest_num_array(int list_numbers[]){
+    public static int find_largest(int array[]){
         int largest = Integer.MIN_VALUE ; 
-        for(int i=0 ; i < list_numbers.length ; i++){
-            if(list_numbers[i] > largest){
-                largest = list_numbers[i] ; 
+        for(int i=0 ; i<array.length ; i++){
+            if(array[i] > largest){
+                largest = array[i] ; 
             }
         }
-        return largest ; 
+        return  largest ; 
     }
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in) ; 
+        int num_array[] = {5,2,11,4,89,50,97,100,23,14,18} ; 
 
-   public static void main(String[] args) {
-    int list_numbers[] = {2,4,6,8,10,12,14,16,18,20,22,25};
+        int ans = find_largest(num_array) ; 
+        System.out.println("final ans = " + ans);
 
-    int max_value = largest_num_array(list_numbers) ; 
-    System.out.println("largest num in arrray is : " + max_value);
-    
-   }
+        sc.close();
+    }
 }

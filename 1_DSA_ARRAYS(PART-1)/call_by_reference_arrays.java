@@ -1,24 +1,26 @@
-// import java.util.* ; 
+import java.util.*;
 public class call_by_reference_arrays {
 
-    public static void update_array(int marks_scored[] , int nonchangable){
+    public static void array_change(int change[] , int nonchange){
 
-        nonchangable = 11 ; 
+        nonchange = 11 ; 
 
-        for(int i=0 ; i < marks_scored.length ; i++){
-            marks_scored[i] = marks_scored[i] + 11 ; 
+        for(int i=0 ; i<change.length ; i++){
+            change[i] = change[i] + nonchange ; 
         }
     }
     public static void main(String[] args) {
-        int marks_scored[] = {75 , 77 , 82} ;
-        int unchanged = 7 ;
-        update_array(marks_scored , unchanged);
+        Scanner sc = new Scanner(System.in) ;
 
-        for(int i=0 ; i < marks_scored.length ; i++){
-            System.out.println(marks_scored[i]);
-            System.out.println(unchanged);
-            System.out.println("=======");
+        int num[] = {50 , 60 , 70 , 80} ; 
+        int static_num  = 7 ; 
+        array_change(num, static_num);
+
+        for(int i=0 ; i<num.length ; i++){
+            System.out.println(num[i]);
+            System.out.println("-------------------");
         }
-    }
 
+        sc.close();
+    }
 }

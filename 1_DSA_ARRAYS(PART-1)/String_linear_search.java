@@ -1,31 +1,33 @@
-import java.util.*; 
+import java.util.*;
 public class String_linear_search {
 
-    public static int string_search(String menu[] , String item){
-        for(int i= 0 ; i < menu.length ; i++){
-            if(menu[i].equals(item)){
-                return i ;
+    public static int string_search(String menus[] , String choice){
+        for(int i=0 ; i<menus.length ; i++){
+            if(menus[i].equals(choice)){
+                return  i ; 
             }
         }
-        return -1 ;
+        return -1 ; 
     }
 
     public static void main(String[] args) {
-        String menu[] = {"idli" , "dosa" , "upma" , "wada" , "poha" , "tea" , " coffee"} ; 
-        Scanner sc = new Scanner(System.in)  ;
-        System.out.print("enter any item that's need to be searched in array : ");
-        String item = sc.nextLine() ; 
+        Scanner sc = new Scanner(System.in) ; 
 
-        int index = string_search(menu, item) ; 
-        if(index == -1){
-            System.out.println("item not found ");
+        String dish ; 
+        System.out.println("enter your favourite dish : ");
+        dish = sc.nextLine() ;
+
+        String menu[] = {"poha","upma","wada","dosa","idli","pongal"} ; 
+        int index = string_search(menu, dish) ; 
+        if(index != -1){
+            System.out.println("dish found at index : " + index);
+            System.out.println("dish is : "+menu[index]);
         }
         else{
-            System.out.println("index number of " + item + " is = " + index );
+            System.out.println("no dish found");
         }
 
         sc.close();
-
 
     }
 }

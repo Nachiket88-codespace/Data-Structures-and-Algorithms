@@ -1,6 +1,6 @@
 // import java.util.Scanner;
 
-public class a_classes_and_objects {
+public class a_classes_objects_encapsulation {
     public static void main(String[] args) {
         Pen p1 = new Pen() ; //created an object of Pen class in heap memory.
         p1.setcolor("Blue");
@@ -36,6 +36,11 @@ class Bank{
 
     public void changepwd(String new_pwd){
         this.password = new_pwd ; 
+    }
+
+    String getpwd(){
+       System.out.println(password);
+       return this.password ;
     }
 }
 

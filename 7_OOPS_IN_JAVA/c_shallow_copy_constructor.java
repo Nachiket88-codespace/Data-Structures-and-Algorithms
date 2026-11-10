@@ -1,4 +1,4 @@
-public class c_copy_constructor {
+public class c_shallow_copy_constructor {
     public static void main(String[] args) {
         student s1 = new student() ; 
         s1.name = "harish" ; 

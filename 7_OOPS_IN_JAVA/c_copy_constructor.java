@@ -9,6 +9,7 @@ public class c_copy_constructor {
         s1.marks[2] = 95 ; 
 
         student s2 = new student(s1) ; 
+        s1.marks[0] = 88 ; 
         s2.password = "14579" ; 
 
         System.out.println(s1.name);

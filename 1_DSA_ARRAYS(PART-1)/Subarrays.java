@@ -1,23 +1,25 @@
 public class Subarrays {
 
-    public static void print_subarrays(int list_of_int_numbers[]){
-        for(int i=0 ; i<list_of_int_numbers.length ; i++){
-            int start = i ; 
-            for(int j=i ; j<list_of_int_numbers.length ; j++){
-                int end = j ;
-                for(int k=start ; k<=end ; k++){
-                    System.out.print(list_of_int_numbers[k] + " ");
+    public static void create_subarray(int array[]){
+        int start = 0 ; 
+        int end = array.length-1 ; 
+
+        for(int i=start ; i<=end ; i++){
+            start = 0 ; 
+            while(start <= end){
+                for(int j=i ; j<start+1 ; j++){
+                    System.out.print(array[j]+",");
                 }
                 System.out.println();
+                start = start + 1 ;
             }
-
-            System.out.println("----------------------------------------------------");
+            System.out.println("-----------------------");
         }
     }
     public static void main(String[] args) {
-        
-        int list_of_int_numbers[] = {2,4,6,8,10,12,14,16,18,20,22,24,25} ; 
+        int num_list[] = {2,4,6,8,10,12,16,18,20,22,24} ; 
 
-        print_subarrays(list_of_int_numbers);
+        create_subarray(num_list);
+
     }
 }

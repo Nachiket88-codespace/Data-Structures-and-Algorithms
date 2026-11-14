@@ -10,7 +10,7 @@ public class g_hierarchial_inheritance {
         b1.fly();
     }
 }
-class animals{
+class animalssss{
     void eats(){
         System.out.println("eats food");
     }
@@ -18,12 +18,12 @@ class animals{
         System.out.println("breadths oxygen");
     }
 }
-class humans extends animals{
+class humans extends animalssss{
     void speaks(){
         System.out.println("speaks languages");
     }
 } 
-class birds extends animals{
+class birds extends animalssss{
     void fly(){
         System.out.println("flys in the air");
     }

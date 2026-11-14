@@ -8,7 +8,7 @@ public class f_multilevel_inheritance {
         d1.walks();
     }
 }
-class animals{
+class animalss{
     void eats(){
         System.out.println("eats food");
     }
@@ -19,7 +19,7 @@ class animals{
         System.out.println("have skin color");
     }
 }
-class mamals extends animals{
+class mamals extends animalss{
     void walks(){
         System.out.println("walks on legs");
     }

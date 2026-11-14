@@ -8,10 +8,10 @@ public class b_constructors {
         cars c3 = new  cars("mclaren","navy blue",5);
 
         System.out.println(c1.name);
-        System.out.println(c1.price);
-        System.out.println(c2.color);
+        System.out.println(c2.price);
+        System.out.println(c3.color);
 
-        
+
     }
 }
 class cars{

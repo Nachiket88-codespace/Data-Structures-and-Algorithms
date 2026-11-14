@@ -1,20 +1,15 @@
 public class create_arrays {
     public static void main(String[] args) {
-        
-        int marks[] = new int[50] ; 
+       int arrays[] = new int[50] ; 
+       int marks[] = {98,100,95,92,88,87} ; 
+       String fruits[] = {"apples","oranges","grapes","mango","peach"} ; 
+       
+       System.out.println(arrays);
+       System.out.println(marks);
+       System.out.println(fruits);
 
-        int numbers[] = {1,2,3,4,5,6,7,8} ; 
-
-        String fruits[] = {"apple" , "orange" , "mango" , "pineapple" } ; 
-
-        System.out.println(marks);
-        System.out.println(numbers);
-        System.out.println(fruits);
-
-        for(int i=0 ; i<=fruits.length ; i++){
-            System.out.println(fruits[i]);
-        }
-        
+       for(int i=0 ; i<fruits.length ; i++){
+        System.out.println(fruits[i]);
+       }
     }
-
 }

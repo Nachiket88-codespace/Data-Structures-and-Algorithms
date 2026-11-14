@@ -1,33 +1,35 @@
 public class b_constructors {
 
     public static void main(String[] args) {
-        Student s1 = new Student("harish", 20) ; 
-        Student s2 = new Student();
-        Student s3 = new Student("Darharya") ; 
+        cars c1  = new cars();
+        c1.name = "ferrari" ; 
 
-        s2.name = "Narada" ; 
+        cars c2 = new cars("mustang" , 500003.1546) ; 
+        cars c3 = new  cars("mclaren","navy blue",5);
 
-        System.out.println(s1.name);
-        System.out.println(s1.age);
-        System.out.println(s2.name);
-        System.out.println(s3.name);
+        System.out.println(c1.name);
+        System.out.println(c1.price);
+        System.out.println(c2.color);
+
+        
     }
 }
-
-class Student{
+class cars{
     String name ; 
-    int age ; 
+    int exhausts ; 
+    double price ; 
+    String color ; 
 
-    Student(String name , int age){
-        this.name = name ; 
-        this.age = age ; 
-        System.out.println("student constructor is called ... ");
+    cars(){
+        System.out.println("default constructor invoked");
     }
-    Student(){
-        System.out.println("default constructor called ...");
-    }
-    Student(String name){
+    cars(String name , double price){
         this.name = name ; 
-        System.out.println("name of the student is : " + this.name);
+        this.price = price ; 
+    }
+    cars(String name , String color , int exhausts){
+        this.name = name ; 
+        this.color = color ; 
+        this.exhausts = exhausts ; 
     }
 }

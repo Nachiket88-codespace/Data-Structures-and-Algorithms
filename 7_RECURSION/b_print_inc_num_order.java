@@ -1,24 +1,23 @@
-import java.util.* ; 
+import java.util.*;
+
 public class b_print_inc_num_order {
 
-    public static void print_inc_order(int n){
+    public static void print_increasing(int num){
 
-        if(n == 1){
-            System.out.print(n+" ");
+        if(num == 0){
             return ;
         }
-
-        print_inc_order(n-1);
-        System.out.print(n + " ");
+        print_increasing(num-1);
+        System.out.print(num+" ");
     }
-
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in) ;
-        System.out.print("enter any num : ");
-        int num = sc.nextInt() ;
+        System.out.println("enter num : ");
+        int num = sc.nextInt() ; 
 
-        print_inc_order(num);
+        print_increasing(num);
 
         sc.close();
+
     }
 }

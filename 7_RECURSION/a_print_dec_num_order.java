@@ -1,21 +1,17 @@
-import java.util.Scanner;
-
+import java.util.* ;
 public class a_print_dec_num_order {
 
-    public static void print_dec_order(int n){
-
-        if(n == 1){
-            System.out.println(n);
+    public static void print_dec_order(int num){
+        if(num == 0){
             return ;
         }
 
-        System.out.print(n+" ");
-        print_dec_order(n-1);
+        System.out.print(num+" ");
+        print_dec_order(num-1);
     }
-
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in) ;
-        System.out.print("enter any num : ");
+        System.out.println("enter num : ");
         int num = sc.nextInt() ; 
 
         print_dec_order(num);

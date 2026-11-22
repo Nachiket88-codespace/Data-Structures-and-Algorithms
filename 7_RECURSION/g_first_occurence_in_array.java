@@ -2,7 +2,7 @@ public class g_first_occurence_in_array {
     
     public static int first_occurence(int array[] , int key , int index){
 
-        if(array[index] == array.length){
+        if(index == array.length){
             return -1 ;
         }
         if(array[index] == key){

@@ -1,25 +1,27 @@
-import java.util.Scanner;
+import java.util.*;
 
 public class d_print_sum_of_natural_num {
-    
-    public static int print_sum(int num){
 
-        if(num == 1){
-            return 1 ;
+    public static int sum_of_num(int num){
+
+        if(num == 0){
+            return 0 ; 
         }
 
-        int fnm1 = print_sum(num-1) ;
-        int sum = num + fnm1 ;
+        int gnm1 = sum_of_num(num-1);
+        int gn = num + gnm1 ;
 
-        return sum ;
+        return gn ;
     }
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in) ;
-        System.out.print("enter any num : ");
+        System.out.println("enter num : ");
         int num = sc.nextInt() ;
 
-        System.out.println(print_sum(num));
+        System.out.println(sum_of_num(num));
+        
+        sc.close();
 
-        sc.close() ;
+
     }
 }

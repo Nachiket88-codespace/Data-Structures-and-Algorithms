@@ -1,21 +1,19 @@
 public class f_sorted_array {
-    
-    public static boolean is_sorted(int array[] , int index){
 
+    public static boolean sort_array(int array[] , int index){
         if(index == array.length-1){
-            return true ; 
+            return true ;
         }
-
-        if(array[index] > array[index+1]){
+        if(array[index]>array[index+1]){
             return false ; 
         }
-
-        return is_sorted(array , index + 1) ; 
+        return sort_array(array, index+1) ; 
     }
+    public static void main(String[] args){
 
-    public static void main(String[] args) {
-        int num[] = {1,2,3,4,5,6,7,8} ; 
-        boolean status = is_sorted(num, 0) ; 
+        int array[] = {2,3,4,5,6,7,8,9} ; 
+
+        boolean status = sort_array(array, 0) ;
 
         if(status == true){
             System.out.println("sorted");

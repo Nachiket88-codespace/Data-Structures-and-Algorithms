@@ -1,4 +1,4 @@
-public class k_remove_duplicates_2 {
+public class k_remove_duplicates_2_og {
 
     public static String delete_duplicate(String str,int index,StringBuilder newstring,boolean map[]){
 
